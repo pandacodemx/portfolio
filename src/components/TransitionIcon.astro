@@ -1,0 +1,9 @@
+---
+// 
+// Recibe como props el icono y otras clases personalizadas para el tamaño o el estilo
+const { Icon, size = 'size-10', extraClasses = '' } = Astro.props;
+---
+
+<div class={`transition-all ease-in-out duration-300 hover:text-gray-500 ${extraClasses}`}>
+  <Icon class={size} />
+</div>
