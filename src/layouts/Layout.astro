@@ -1,46 +1,70 @@
 ---
 import Header from "../components/Header.astro";
-import '@fontsource-variable/plus-jakarta-sans';
-import '@fontsource-variable/jetbrains-mono';
+import "@fontsource-variable/plus-jakarta-sans";
+import "@fontsource-variable/jetbrains-mono";
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
-const { title, description} = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="relative">
-		<div class="absolute top-0 left-0 z-[-2] h-full w-full bg-neutral-900 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="relative">
+    <!--<div
+      class="absolute top-0 left-0 z-[-2]  bg-neutral-900 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    > -->
+    <div
+      class="absolute z-[-2] h-full w-full bg-gradient-to-b from-purple-950 via-pink-900 to-zinc-900"
+    >
+    </div>
 
-		<Header/>
-		<slot />
-	</body>
+    <Header />
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		color-scheme: light dark;	
-	}
-	
-	html {
-		font-family: 'Plus Jakarta Sans Variable';
-	}
-	body
-	{
-		background: #1b1b1b;
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-	
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    font-family: "Plus Jakarta Sans Variable";
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #771c6b; /* Fondo más oscuro para modo oscuro */
+    color: white; /* Texto blanco en modo oscuro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  @media (prefers-reduced-moition: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212; /* Fondo más oscuro para modo oscuro */
+      color: white; /* Texto blanco en modo oscuro */
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    body {
+      color: white; /* Texto negro en modo claro */
+    }
+  }
 </style>
