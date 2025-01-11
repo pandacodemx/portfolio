@@ -3,15 +3,15 @@ import ExperienceItem from "./Experience-Item.astro";
 
 const EXPERIENCE = [
   {
-    date: "Febrero 2020 - Actualmente ",
+    date: "Febrero 2020 - Actual ",
     title: "Grupo Corporativo La Pequeña Garcia",
     description:
-      "Empresa dedicada a la distribuicion en mayoreo de material ferretero y material de construccion. Encargado del desarollo del ecommerce, asi como el desarrollo del punto de venta donde se lleva el control total de todas las operaciones que se realizan en la empresa. ",
+      "Empresa dedicada a la distribución en mayoreo de material ferretero y material de construcción. Encargado del desarrolló del ecommerce, asi como el desarrollo del punto de venta donde se lleva el control total de todas las operaciones que se realizan en la empresa. ",
   },
   {
     date: "Enero 2024 - Actual",
-    title: "Freelance",
-    description: "Esto es una descripcion",
+    title: "Full Stack Developer Freelance",
+    description: "Trabajé de manera independiente desarrollando soluciones personalizadas para diversos clientes, abarcando tanto el desarrollo front-end como back-end. Mis proyectos incluyeron aplicaciones web, integración de bases de datos y optimización de la experiencia del usuario. Utilicé tecnologías como JavaScript, PHP, Next.js, y bases de datos SQL para entregar soluciones completas y funcionales.",
   },
   {
     date: "Enero 2019 - Julio 2019",
@@ -24,7 +24,7 @@ const EXPERIENCE = [
 <ol class="relative border-s border-gray-200 dark:border-gray-700">
   {
     EXPERIENCE.map((experiencie) => (
-      <li class="mb-10 ms-7">
+      <li class="mb-8 ms-7">
         <ExperienceItem {...experiencie} />
       </li>
     ))
