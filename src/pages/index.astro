@@ -28,7 +28,9 @@ import AcercaMi from "../components/Acerca_mi.astro";
   description="Buscas realizar tu proyecto, contactarme. Desarrollador web"
 >
   <section class="w-full mx-auto lg:w-[1280px] pt-20 pb-2 px-2">
-    <div class="grid grid-cols-4 grid-rows-3 gap-2">
+    <div
+      class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 grid-rows-3 gap-2"
+    >
       <div class="bg-black/20 rounded-lg col-span-2 row-span-2 p-7">
         <h1
           class="bg-gradient-to-r from-indigo-300 via-purple-500 to-pink-500 bg-clip-text text-transparent text-3xl lg:text-6xl font-extrabold flex flex-row gap-x-4"
@@ -54,7 +56,9 @@ import AcercaMi from "../components/Acerca_mi.astro";
           </Social>
         </div>
       </div>
-      <div class="bg-black/10 row-span-2 col-start-3 rounded-lg p-7 flex">
+      <div
+        class="bg-black/10 row-span-2 col-start-1 rounded-lg p-7 flex lg:col-start-3"
+      >
         <img
           class="w-full mx-auto my-auto"
           src="https://cdn3d.iconscout.com/3d/premium/thumb/panic-panda-3d-emoji-download-in-png-blend-fbx-gltf-file-formats--animal-face-stressed-pack-sign-symbols-emojis-4127201.png?f=webp"
@@ -95,7 +99,7 @@ import AcercaMi from "../components/Acerca_mi.astro";
         />
       </div>
       <div
-        class="bg-black/10 rounded-lg col-span-2 col-start-2 row-start-3 p-7"
+        class="bg-black/10 rounded-lg col-span-2 col-start-2 row-start-4 lg:row-start-3 p-7"
       >
         <p
           class="bg-gradient-to-r from-pink-200 to-pink-600 bg-clip-text text-transparent text-base font-bold"
@@ -167,7 +171,7 @@ import AcercaMi from "../components/Acerca_mi.astro";
   </section>
 
   <div
-    class="grid grid-cols-2 grid-rows-1 gap-2 w-full mx-auto lg:w-[1280px] px-2"
+    class="grid grid-cols-1 grid-rows-1 sm:grid-cols-2 gap-2 w-full mx-auto lg:w-[1280px] px-2"
   >
     <section id="sobre-mi">
       <div class="bg-black/10 rounded-lg flex flex-col pt-7 p-7">
