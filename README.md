@@ -1,4 +1,2 @@
 # Portfolio PandaCode
-
-
-![FireShot Capture 013 - Porfolio PandaCode - Desarollador y programador web - localhost](https://github.com/user-attachments/assets/b0552caf-b03a-49a3-ad36-a3f0c8577f9b)
+![1](https://github.com/user-attachments/assets/016c0035-999b-4fef-b645-2b488692abb4)
