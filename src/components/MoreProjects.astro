@@ -1,0 +1,96 @@
+---
+import PHPIcon from "./icons/Php.astro";
+import MySQL from "./icons/MySQL.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import NextJs from "./icons/NextJs.astro";
+import React from "./icons/React.astro";
+import GoIcon from "./icons/Go.astro";
+import AstroIcon from "./icons/Astro.astro";
+import Tailwind from "./icons/Tailwind.astro";
+
+const TAGS = {
+  PHP: {
+    name: "PHP",
+    class: "bg-black/50 text-white flex  items-center w-28 justify-center",
+    icon: PHPIcon,
+  },
+  MySQL: {
+    name: "MySQL",
+    class: "bg-black/50 text-white flex  items-center w-28 justify-center",
+    icon: MySQL,
+  },
+  JavaScript: {
+    name: "JavaScript",
+    class: "bg-black/50 text-white flex  items-center w-28 justify-center",
+    icon: JavaScript,
+  },
+
+  NEXTJS: {
+    name: "NextJS",
+    class: "bg-black/50 text-white flex  items-center w-28 justify-center",
+    icon: NextJs,
+  },
+
+  React: {
+    name: "React",
+    class: "bg-black/50 text-white flex  items-center w-28 justify-center",
+    icon: React,
+  },
+
+  AstroIcon: {
+    name: "Astro",
+    class: "bg-black/50 text-white flex  items-center w-28 justify-center",
+    icon: AstroIcon,
+  },
+
+  Tailwind: {
+    name: "Tailwind",
+    class: "bg-black/50 text-white flex  items-center w-28 justify-center",
+    icon: Tailwind,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Tesla Clon - Pagina web",
+    description:
+      "Clon del sitio web de Tesla, desarrollo con Astro y Tailwind.",
+    link: "https://gcpgarcia.com/login",
+    image: "/projects/tesla.webp",
+    tags: [TAGS.AstroIcon, TAGS.Tailwind],
+  },
+];
+---
+
+{
+  PROJECTS.map(
+    ({ title, image, image_portada, link, image2, description, tags }) => (
+      <article class="flex flex-col justify-center p-10 w-full mx-auto bg-black/10 rounded-lg">
+        <h4 class="bg-gradient-to-r from-indigo-200 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl font-extrabold mb-5">
+          {title}
+        </h4>
+        <p class="text-[12px] text-pink-200 text-pretty mb-5">{description}</p>
+        <ul class="flex gap-x-2 flex-row">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+              >
+                <tag.icon class="size-5" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <span class="flex mt-2  gap-2 rounded-full text-xs py-1 px-2 bg-pink-800/70 text-white items-center w-28 justify-center hover:bg-pink-600 transition-all duration-300 ease-in-out ">
+            Ver sitio <GoIcon class="size-4" />
+          </span>
+        </a>
+        <div class="flex flex-row  mt-4 justify-center ">
+          <img class="rounded-md w-[100%] mx-auto" src={image} />
+        </div>
+      </article>
+    )
+  )
+}
