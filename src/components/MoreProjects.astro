@@ -54,6 +54,30 @@ const PROJECTS = [
   {
     title: "Tesla Clon - Pagina web",
     description:
+      "Clon del sitio web de Tesla, desarrollo con Astro y Tailwind. Cuenta con dos versiones en base a cada año de Tesla ",
+    link: "https://gcpgarcia.com/login",
+    image: "/projects/tesla.webp",
+    tags: [TAGS.AstroIcon, TAGS.Tailwind],
+  },
+  {
+    title: "Proyectos en JavaScript",
+    description:
+      "Multiples proyectos en Javascript, Pokedex, Animaciones por Scroll, Tier Maker, etc.",
+    link: "https://gcpgarcia.com/login",
+    image: "/projects/pokejs.webp",
+    tags: [TAGS.JavaScript],
+  },
+  {
+    title: "Tesla Clon - Pagina web",
+    description:
+      "Clon del sitio web de Tesla, desarrollo con Astro y Tailwind.",
+    link: "https://gcpgarcia.com/login",
+    image: "/projects/tesla.webp",
+    tags: [TAGS.AstroIcon, TAGS.Tailwind],
+  },
+  {
+    title: "Tesla Clon - Pagina web",
+    description:
       "Clon del sitio web de Tesla, desarrollo con Astro y Tailwind.",
     link: "https://gcpgarcia.com/login",
     image: "/projects/tesla.webp",
@@ -63,34 +87,32 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(
-    ({ title, image, image_portada, link, image2, description, tags }) => (
-      <article class="flex flex-col justify-center p-10 w-full mx-auto bg-black/10 rounded-lg">
-        <h4 class="bg-gradient-to-r from-indigo-200 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl font-extrabold mb-5">
-          {title}
-        </h4>
-        <p class="text-[12px] text-pink-200 text-pretty mb-5">{description}</p>
-        <ul class="flex gap-x-2 flex-row">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
-              >
-                <tag.icon class="size-5" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <span class="flex mt-2  gap-2 rounded-full text-xs py-1 px-2 bg-pink-800/70 text-white items-center w-28 justify-center hover:bg-pink-600 transition-all duration-300 ease-in-out ">
-            Ver sitio <GoIcon class="size-4" />
-          </span>
-        </a>
-        <div class="flex flex-row  mt-4 justify-center ">
-          <img class="rounded-md w-[100%] mx-auto" src={image} />
-        </div>
-      </article>
-    )
-  )
+  PROJECTS.map(({ title, image, link, description, tags }) => (
+    <article class="flex flex-col justify-center p-10 w-full mx-auto bg-black/10 rounded-lg">
+      <h4 class="bg-gradient-to-r from-indigo-200 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl font-extrabold mb-5">
+        {title}
+      </h4>
+      <p class="text-[12px] text-pink-200 text-pretty p-5">{description}</p>
+      <ul class="flex gap-x-2 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-5" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <span class="flex mt-2  gap-2 rounded-full text-xs py-1 px-2 bg-pink-800/70 text-white items-center w-28 justify-center hover:bg-pink-600 transition-all duration-300 ease-in-out ">
+          Ver demo <GoIcon class="size-4" />
+        </span>
+      </a>
+      <div class="flex flex-row  mt-4 justify-center ">
+        <img class="rounded-md w-[100%] mx-auto" src={image} />
+      </div>
+    </article>
+  ))
 }
