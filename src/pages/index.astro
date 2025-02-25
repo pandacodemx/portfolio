@@ -55,7 +55,7 @@ import MoreProjects2 from "../components/MoreProjects2.astro";
             "Aprendiendo cada dia, si imaginas algo, se pueden programar."
           </small>
         </p>
-        <div class="mt-6 w-40 justify-end ml-64">
+        <div class="mt-6 w-90 flex justify-end">
           <Social href="">
             <p class="text-xs flex flex-row gap-x-2">
               Descargar CV <Download class="size-4" />
@@ -124,22 +124,22 @@ import MoreProjects2 from "../components/MoreProjects2.astro";
       <section>
         <div class="py-8 mx-auto max-w-screen-xl px-8">
           <div
-            class="grid justify-items-center grid-cols-2 gap-8 text-gray-200 sm:gap-12 md:grid-cols-3 lg:grid-cols-5 dark:text-gray-400"
+            class="grid justify-items-center grid-cols-2 gap-8 text-gray-200 sm:gap-12 md:grid-cols-3 lg:grid-flow-col dark:text-gray-400"
           >
             <TransitionIcon Icon={HTMLIcon} size="size-12" title="HTML" />
             <TransitionIcon Icon={CSSIcon} size="size-12" title="CSS" />
-            <TransitionIcon
-              Icon={TailwindIcon}
-              size="size-12"
-              title="Tailwind CSS"
-            />
             <TransitionIcon Icon={PhpIcon} size="size-12" title="PHP" />
             <TransitionIcon Icon={LaravelIcon} size="size-12" title="Laravel" />
             <TransitionIcon Icon={JavaIcon} size="size-12" title="JavaScript" />
             <TransitionIcon Icon={AstroIcon} size="size-12" title="Astro" />
-            <TransitionIcon Icon={NextJSIcon} size="size-12" title="Next.js" />
             <TransitionIcon Icon={ReactIcon} size="size-12" title="React" />
+            <TransitionIcon Icon={NextJSIcon} size="size-12" title="Next.js" />
             <TransitionIcon Icon={MySQLIcon} size="size-12" title="MySQL" />
+            <TransitionIcon
+              Icon={TailwindIcon}
+              size="size-12"
+              title="Tailwind"
+            />
           </div>
         </div>
       </section>
