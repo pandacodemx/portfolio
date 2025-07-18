@@ -1,7 +1,6 @@
 ---
 import Header from "../components/Header.astro";
-import "@fontsource-variable/plus-jakarta-sans";
-import "@fontsource-variable/jetbrains-mono";
+import "@fontsource/poppins";
 interface Props {
   title: string;
   description: string;
@@ -25,7 +24,7 @@ const { title, description } = Astro.props;
       class="absolute top-0 left-0 z-[-2]  bg-neutral-900 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     > -->
     <div
-      class="absolute z-[-2] h-full w-full bg-gradient-to-b from-zinc-800 via-fuchsia-900 to-zinc-900"
+      class="absolute z-[-2] h-full w-full bg-gradient-to-b from-gray-200 via-gray-200 to-gray-100"
     >
     </div>
 
@@ -39,12 +38,12 @@ const { title, description } = Astro.props;
   }
 
   html {
-    font-family: "Plus Jakarta Sans Variable";
+    font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
   }
   body {
-    background-color: #771c6b; /* Fondo más oscuro para modo oscuro */
-    color: white; /* Texto blanco en modo oscuro */
+    background-color: #771c6b;
+    color: white;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -57,8 +56,8 @@ const { title, description } = Astro.props;
   }
   @media (prefers-color-scheme: dark) {
     body {
-      background-color: #121212; /* Fondo más oscuro para modo oscuro */
-      color: white; /* Texto blanco en modo oscuro */
+      background-color: #121212;
+      color: white;
     }
   }
 

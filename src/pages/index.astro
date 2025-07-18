@@ -4,18 +4,7 @@ import Badge from "../components/Badge.astro";
 import Social from "../components/Social.astro";
 import LinkedInIcon from "../components/icons/Linkedin.astro";
 import GithubIcon from "../components/icons/Github.astro";
-import PhpIcon from "../components/icons/Php.astro";
-import JavaIcon from "../components/icons/JavaScript.astro";
-import MySQLIcon from "../components/icons/MySQL.astro";
-import LaravelIcon from "../components/icons/Laravel.astro";
-import AstroIcon from "../components/icons/Astro.astro";
-import TailwindIcon from "../components/icons/Tailwind.astro";
-import NextJSIcon from "../components/icons/NextJs.astro";
-import ReactIcon from "../components/icons/React.astro";
-import TransitionIcon from "../components/TransitionIcon.astro";
 import IGIcon from "../components/icons/Instragram.astro";
-import CSSIcon from "../components/icons/Css.astro";
-import HTMLIcon from "../components/icons/HTML.astro";
 import FBIcon from "../components/icons/Facebook.astro";
 import DiscordIcon from "../components/icons/Discord.astro";
 import XIcon from "../components/icons/X.astro";
@@ -25,36 +14,63 @@ import Projects from "../components/Projects.astro";
 import Email from "../components/icons/Email.astro";
 import Download from "../components/icons/Download.astro";
 import MoreProjects from "../components/MoreProjects.astro";
-import MoreProjects2 from "../components/MoreProjects2.astro";
+import Habilities from "../components/Habilities.astro";
 ---
 
 <Layout
   title="Portfolio PandaCode - Desarrollador y programador web"
   description="Buscas realizar tu proyecto, contactarme. Desarrollador web"
 >
-  <section class="w-full mx-auto lg:w-[1024px] pt-20 pb-2 px-2">
+  <section class="w-full mx-auto lg:w-[1024px] pt-10 pb-2 px-2">
     <div class="grid grid-cols-3 grid-rows-1 gap-2">
-      <div class="bg-black/20 rounded-lg col-span-2 row-span-2 p-7">
+      <div class="bg-black/10 rounded-lg col-span-2 row-span-2 p-7">
         <h1
-          class="bg-gradient-to-r from-indigo-300 via-purple-500 to-pink-500 bg-clip-text text-transparent text-3xl lg:text-6xl font-extrabold flex flex-row gap-x-4"
+          class="bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text text-transparent text-3xl lg:text-6xl font-extrabold flex flex-row gap-x-4"
         >
           Said Alfredo
         </h1>
-        <p class="text-pink-500 opacity-100 pt-4 text-xl lg:text-2xl pb-4">
+        <p class="text-gray-500 opacity-100 pt-4 text-xl lg:text-2xl pb-3">
           Desarrollador Full Stack <div class="flex w-96"></div>
-          <a href="" target="_blank" rel="noopener" class=""
-            ><Badge>Disponible para trabajar</Badge></a
-          >
+          <div class="flex items-center gap-2 mb-6">
+            <span class="relative flex h-3 w-3">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-900 opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-3 w-3 bg-gray-600"
+              ></span>
+            </span>
+            <Badge class="hover:scale-105 transition-transform"
+              >Disponible para trabajar</Badge
+            >
+          </div>
         </p>
-        <p class="text-white text-sm pt-4">
+        <p class="text-gray-500 text-sm pt-4">
           Trabajo bajo el nombre de PandaCode. Me mantengo en constante <b
             >aprendizaje</b
           > para aumentar mi capacidad de resolver
-          <b>problemas</b>. <br />
-          <small>
-            "Aprendiendo cada dia, si imaginas algo, se pueden programar."
-          </small>
+          <b>problemas</b>.
         </p>
+        <a href="#about" class="home__scroll-button button--flex"
+          ><svg
+            width="32px"
+            height="32px"
+            class="home__scroll-mouse"
+            viewBox="0 0 247 390"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            style="fill-rule: evenodd; clip-rule: evenodd; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 1.5;"
+            ><path
+              class="wheel"
+              d="M123.359,79.775l0,72.843"
+              style="fill: none; stroke: #111; stroke-width: 20px;"></path><path
+              id="mouse"
+              d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z"
+              style="fill: none; stroke: #111; stroke-width: 20px;"></path></svg
+          ><span class="text-black">Desplazarse hacia abajo</span><i
+            class="uil uil-arrow-down home__scroll-arrow"></i></a
+        >
         <div class="mt-6 w-90 flex justify-end">
           <Social href="">
             <p class="text-xs flex flex-row gap-x-2">
@@ -64,11 +80,10 @@ import MoreProjects2 from "../components/MoreProjects2.astro";
         </div>
       </div>
       <div
-        class="bg-black/10 row-span-2 col-start-3 rounded-lg p-10 mx-2 flex flex-col justify-center"
+        class="bg-black/10 row-span-2 col-start-3 rounded-lg p-5 mx-2 flex flex-col justify-center"
       >
-        <div class="flex mx-auto my-auto">
+        <div class="flex mx-auto my-auto profile">
           <img
-            class="rounded-full size-32 object-cover"
             src="https://i.ibb.co/vY6sqVF/Imagen-de-Whats-App-2024-12-09-a-las-13-09-14-59a7b681.jpg"
             alt="Perfil Foto"
           />
@@ -77,19 +92,17 @@ import MoreProjects2 from "../components/MoreProjects2.astro";
           <div class="flex gap-2 text-sm mb-2">
             <Social href="">
               <LinkedInIcon class="size-4" />
-              LinkedIn
             </Social>
 
             <Social href="">
-              <GithubIcon class="size-4" />
-              Github
+              <GithubIcon class="size-4" alt="Github" />
             </Social>
           </div>
         </div>
       </div>
 
       <div
-        class="bg-black/20 rounded-lg col-start-4 flex items-center justify-center p-4"
+        class="bg-black/10 rounded-lg col-start-4 flex items-center justify-center p-4"
       >
         <img
           class="w-12 rounded-sm mr-2"
@@ -97,7 +110,7 @@ import MoreProjects2 from "../components/MoreProjects2.astro";
           alt=""
         />
         <h1
-          class="bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent text-[30px] font-bold"
+          class="bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text text-transparent text-[30px] font-bold"
         >
           México
         </h1>
@@ -107,7 +120,7 @@ import MoreProjects2 from "../components/MoreProjects2.astro";
       >
         <img
           class="w-72 rounded-lg object-cover"
-          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzM0b2E1dWtqazE4Y2V3aGc0eWRieHA4d29rZ2oydHg1ZXZxNWw3YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9B7XwCQZRQfQs/giphy.gif"
+          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2w4aTQ0NGwzcmVzdjF0bmcxZ2x5djF6NWowanFkeno2cXJ2MnU3YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRNiATmtg6s1jC8/giphy.gif"
           alt=""
         />
       </div>
@@ -115,35 +128,7 @@ import MoreProjects2 from "../components/MoreProjects2.astro";
   </section>
 
   <section class="w-full mx-auto lg:w-[1024px] pb-2 px-2 my-2">
-    <div class="bg-black/20 rounded-lg p-7">
-      <p
-        class="bg-gradient-to-r from-pink-200 to-pink-600 bg-clip-text text-transparent text-xl font-bold"
-      >
-        &lt; / Tecnologías &gt;
-      </p>
-      <section>
-        <div class="py-8 mx-auto max-w-screen-xl px-8">
-          <div
-            class="grid justify-items-center grid-cols-2 gap-8 text-gray-200 sm:gap-12 md:grid-cols-3 lg:grid-flow-col dark:text-gray-400"
-          >
-            <TransitionIcon Icon={HTMLIcon} size="size-12" title="HTML" />
-            <TransitionIcon Icon={CSSIcon} size="size-12" title="CSS" />
-            <TransitionIcon Icon={PhpIcon} size="size-12" title="PHP" />
-            <TransitionIcon Icon={LaravelIcon} size="size-12" title="Laravel" />
-            <TransitionIcon Icon={JavaIcon} size="size-12" title="JavaScript" />
-            <TransitionIcon Icon={AstroIcon} size="size-12" title="Astro" />
-            <TransitionIcon Icon={ReactIcon} size="size-12" title="React" />
-            <TransitionIcon Icon={NextJSIcon} size="size-12" title="Next.js" />
-            <TransitionIcon Icon={MySQLIcon} size="size-12" title="MySQL" />
-            <TransitionIcon
-              Icon={TailwindIcon}
-              size="size-12"
-              title="Tailwind"
-            />
-          </div>
-        </div>
-      </section>
-    </div>
+    <Habilities />
   </section>
 
   <!--PROYECTOS-->
@@ -152,7 +137,7 @@ import MoreProjects2 from "../components/MoreProjects2.astro";
     <section id="proyectos">
       <div class="bg-black/10 rounded-lg flex flex-col p-7">
         <p
-          class="bg-gradient-to-r from-pink-200 to-pink-600 bg-clip-text text-transparent text-3xl font-bold mb-5"
+          class="bg-gradient-to-r from-pink-200 to-pink-600 bg-clip-text text-transparent text-xl font-bold mb-5"
         >
           &lt; / Proyectos &gt;
         </p>
@@ -240,4 +225,34 @@ import MoreProjects2 from "../components/MoreProjects2.astro";
     </div>
   </section>
 </Layout>
--->
+
+<style>
+  .profile {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    animation: blob 5s ease-in-out infinite;
+  }
+
+  .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @keyframes blob {
+    0%,
+    100% {
+      border-radius: 62% 38% 88% 12% / 55% 71% 29% 45%;
+    }
+    25% {
+      border-radius: 40% 60% 55% 45%;
+    }
+    50% {
+      border-radius: 60% 40% 45% 55%;
+    }
+    75% {
+      border-radius: 50% 50% 50% 50%;
+    }
+  }
+</style>
