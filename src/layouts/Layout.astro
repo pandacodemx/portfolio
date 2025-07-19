@@ -7,9 +7,15 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+import "aos/dist/aos.css";
+
+if (Astro.client === "load") {
+  import("aos").then((AOS) => AOS.init());
+}
 ---
 
-<!doctype html>
+---
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -67,3 +73,11 @@ const { title, description } = Astro.props;
     }
   }
 </style>
+<script>
+  import AOS from "aos";
+  AOS.init({
+    duration: 800,
+    once: true,
+    delay: 300,
+  });
+</script>

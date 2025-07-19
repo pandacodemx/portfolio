@@ -10,44 +10,89 @@ import ReactIcon from "../components/icons/React.astro";
 import TransitionIcon from "../components/TransitionIcon.astro";
 import CSSIcon from "../components/icons/Css.astro";
 import HTMLIcon from "../components/icons/HTML.astro";
+import Supabase from "./icons/Supabase.astro";
 ---
 
-<div class="bg-black/10 rounded-lg p-7 flex">
-  <section>
+<div
+  class="bg-black/10 dark:bg-white/5 rounded-lg p-7 grid gap-6 md:grid-cols-2"
+>
+  <section class="text-center">
     <p
-      class="bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text text-transparent text-md font-bold"
+      class="text-md font-extrabold text-center text-transparent bg-gradient-to-r from-gray-500 via-gray-500 to-gray-500 bg-clip-text mb-4 uppercase tracking-wider"
+      data-aos="zoom-in-right"
+      data-aos-delay='1000"'
     >
-      &lt; / Frontend &gt;
+      &lt;/ Frontend &gt;
     </p>
+
     <div class="py-8 mx-auto max-w-screen-xl px-8">
       <div
         class="grid justify-items-center grid-cols-2 gap-5 text-black sm:gap-12 md:grid-cols-3 lg:grid-flow-col dark:text-gray-400"
       >
-        <TransitionIcon Icon={HTMLIcon} size="size-8" title="HTML" />
-        <TransitionIcon Icon={CSSIcon} size="size-8" title="CSS" />
-        <TransitionIcon Icon={JavaIcon} size="size-8" title="JavaScript" />
-        <TransitionIcon Icon={AstroIcon} size="size-8" title="Astro" />
-        <TransitionIcon Icon={ReactIcon} size="size-8" title="React" />
-
-        <TransitionIcon Icon={TailwindIcon} size="size-8" title="Tailwind" />
+        <div data-aos="zoom-in" data-aos-delay="1100">
+          <TransitionIcon Icon={HTMLIcon} size="size-8" title="HTML" />
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="1200">
+          <TransitionIcon Icon={CSSIcon} size="size-8" title="CSS" />
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="1300">
+          <TransitionIcon Icon={JavaIcon} size="size-8" title="JavaScript" />
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="1400">
+          <TransitionIcon Icon={AstroIcon} size="size-10" title="Astro" />
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="1500">
+          <TransitionIcon Icon={ReactIcon} size="size-10" title="React" />
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="1600">
+          <TransitionIcon Icon={TailwindIcon} size="size-8" title="Tailwind" />
+        </div>
       </div>
     </div>
   </section>
-  <section>
+  <section class="text-center">
     <p
-      class="bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text text-transparent text-md font-bold"
+      class="text-md font-extrabold text-center text-transparent bg-gradient-to-r from-gray-500 via-gray-500 to-gray-500 bg-clip-text mb-4 uppercase tracking-wider"
+      data-aos="zoom-in-left"
+      data-aos-delay="1000"
     >
-      &lt; / Backend &gt;
+      &lt;/ Backend &gt;
     </p>
     <div class="py-8 mx-auto max-w-screen-xl px-8">
       <div
         class="grid justify-items-center grid-cols-2 gap-8 text-black sm:gap-12 md:grid-cols-3 lg:grid-flow-col dark:text-gray-400"
       >
-        <TransitionIcon Icon={PhpIcon} size="size-8" title="PHP" />
-        <TransitionIcon Icon={LaravelIcon} size="size-8" title="Laravel" />
-        <TransitionIcon Icon={NextJSIcon} size="size-8" title="Next.js" />
-        <TransitionIcon Icon={MySQLIcon} size="size-8" title="MySQL" />
+        <div data-aos="zoom-in" data-aos-delay="1600">
+          <TransitionIcon Icon={PhpIcon} size="size-8" title="PHP" />
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="1500">
+          <TransitionIcon Icon={LaravelIcon} size="size-8" title="Laravel" />
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="1400">
+          <TransitionIcon Icon={NextJSIcon} size="size-8" title="Next.js" />
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="1300">
+          <TransitionIcon Icon={MySQLIcon} size="size-8" title="MySQL" />
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="1200">
+          <TransitionIcon Icon={Supabase} size="size-8" title="Supabase" />
+        </div>
       </div>
     </div>
   </section>
 </div>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("opacity-0", "translate-y-15");
+        entry.target.classList.add("opacity-100", "translate-y-0");
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  document
+    .querySelectorAll("[data-observe]")
+    .forEach((el) => observer.observe(el));
+</script>
