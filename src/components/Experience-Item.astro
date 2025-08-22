@@ -9,6 +9,8 @@ const { title, description, link, date } = Astro.props;
 ---
 
 <span
+  data-aos="zoom"
+  data-aos-delay='800"'
   class="absolute flex items-center justify-center w-6 h-6 bg-gray-400 rounded-full -start-3 ring-8 ring-gray-700 dark:ring-gray-900 dark:bg-blue-900"
 >
   <svg
@@ -24,16 +26,23 @@ const { title, description, link, date } = Astro.props;
   </svg>
 </span>
 <h3
-  class="flex items-center mb-1 text-lg font-semibold text-white dark:text-white"
+  data-aos="zoom"
+  data-aos-delay='800"'
+  class="flex items-center mb-1 text-lg font-semibold text-black dark:text-white"
 >
   {title}
-  >
 </h3>
 <time
-  class="block mb-2 text-sm font-normal leading-none text-pink-400 dark:text-gray-500"
+  data-aos="zoom"
+  data-aos-delay='800"'
+  class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-500"
   >{date}</time
 >
-<p class="mb-4 text-[12px] font-normal text-gray-300 dark:text-gray-400">
+<p
+  data-aos="zoom"
+  data-aos-delay='800"'
+  class="mb-4 text-[12px] font-normal text-gray-700 dark:text-gray-400"
+>
   {description}
 </p>
 {
